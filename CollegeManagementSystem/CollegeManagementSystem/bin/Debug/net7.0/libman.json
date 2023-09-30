@@ -1,0 +1,18 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "multiselect@2.5.6",
+      "destination": "wwwroot/lib/bootstrap/dist/css/multiselect/"
+    },
+    {
+      "library": "multiple-select@1.2.3",
+      "destination": "wwwroot/lib/bootstrap/dist/css/multiple-select/"
+    },
+    {
+      "library": "bootstrap-icons@1.10.5",
+      "destination": "wwwroot/lib/bootstrap-icons/"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+﻿@model List<Summary>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Code</th>
+            <th>Course</th>
+            <th>Day</th>
+            <th>Student Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Code</td>
+                <td>@item.Name</td>
+                <td>@item.Day</td>
+                <td>@item.Full_Name</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,41 @@
+﻿@using College_Management_System.Models;
+@model Student;
+<h1 class="alert alert-info text-center">@Model.Full_Name`s Details</h1>
+<div class="row col-6">
+	<dl class="row">
+		
+		<dt class="col-2">@Html.DisplayNameFor(e=>Model.Id)</dt>
+		<dd class="col-10">@Html.DisplayFor(e=>Model.Id)</dd>
+		
+		<dt class="col-2">@Html.DisplayNameFor(e=>Model.Full_Name)</dt>
+		<dd class="col-10">@Html.DisplayFor(e=>Model.Full_Name)</dd>
+		
+		<dt class="col-2">@Html.DisplayNameFor(e=>Model.Sex)</dt>
+		<dd class="col-10">@Html.DisplayFor(e=>Model.Sex)</dd>
+		
+		<dt class="col-2">@Html.DisplayNameFor(e=>Model.BirthDate)</dt>
+		<dd class="col-10">@Html.DisplayFor(e=>Model.BirthDate)</dd>
+		
+		<dt class="col-2">@Html.DisplayNameFor(e=>Model.contact_add)</dt>
+		<dd class="col-10">@Html.DisplayFor(e=>Model.contact_add)</dd>
+
+	</dl>
+	<div class="col-6 text-center">
+		<img src="@Model.ImageUrl" style="max-width: 100%; height: auto;" />
+	</div>
+@*	<h3>Department Employees</h3>
+	@if (Model.studentCourses.Count > 0)
+	{
+		<ul>
+			@foreach (var item in Model.studentCourses)
+			{
+				<li>@item.courseId (@item.Position)</li>
+			}
+		</ul>
+	}
+	else
+	{
+		<h1 class="alert alert-danger">There is no employee in this department.</h1>
+	}*@
+</div>
+<a class="btn btn-primary btn-block mb-4" asp-action="GetIndexView" asp-controller="Student">Back to list</a>

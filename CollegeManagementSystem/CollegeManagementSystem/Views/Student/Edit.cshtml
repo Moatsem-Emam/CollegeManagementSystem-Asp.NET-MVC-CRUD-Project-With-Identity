@@ -1,0 +1,85 @@
+﻿@using College_Management_System.Models;
+@model Student
+<h1 class="alert alert-info ">Edit Student</h1>
+<br />
+<form class="col-3" method="post" asp-action="EditS" asp-controller="Student" enctype="multipart/form-data">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="ImageUrl" />
+
+    <div class="row mb-1">
+        <!-- Name input -->
+        <div class="col">
+            <div class="form-outline">
+                <label asp-for="Full_Name"></label>
+
+                <input asp-for="Full_Name" type="text" class="form-control" />
+                <span asp-validation-for="Full_Name" class="text-danger"></span>
+
+            </div>
+        </div>
+
+        <!-- Gender input -->
+        <div class="col">
+            <div class="form-outline">
+
+                <label asp-for="Sex"></label>
+                <input asp-for="Sex" type="text" id="form3Example2" class="form-control" />
+                <span asp-validation-for="Sex" class="text-danger"></span>
+
+            </div>
+        </div>
+
+        <!-- Contact input -->
+
+        <div class="col">
+            <div class="form-outline">
+
+                <label asp-for="contact_add"></label>
+                <input asp-for="contact_add" type="text" id="form3Example2" class="form-control" />
+                <span asp-validation-for="contact_add" class="text-danger"></span>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- BD input -->
+    <div class="form-outline mb-4">
+        <label asp-for="BirthDate"></label>
+        <input asp-for="BirthDate" id="form3Example4" class="form-control" />
+        <span asp-validation-for="BirthDate" class="text-danger"></span>
+
+    </div>
+
+    <!-- Image input -->
+    <div class="mb-3">
+        <label asp-for="ImageUrl"></label>
+        <input class="form-control form-control-sm" id="imageFormFile" type="file" accept=".png,.jpg " name="imageFormFile" onchange="Addimage()">
+    </div>
+@*
+    <!-- Courses input -->
+    <div>
+        <select asp-for="courses" asp-items="@ViewBag.AllCourses" class="select" multiple data-mdb-placeholder="Select Courses" name="selectedCourseId">
+            <option selected disabled>Select Multiple</option>
+        </select>
+        <span asp-validation-for="courses" class="text-danger"></span>
+
+    </div>*@
+
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary btn-block mb-4">Edit</button>
+    <a class="btn btn-primary btn-block mb-4" asp-action="GetIndexView" asp-controller="Student">Back to list</a>
+
+</form>
+
+<div class="col-4">
+    <img src="" id="empImage" style="object-fit:contain" />
+</div>
+
+@section Scripts{
+    <script>
+        function Addimage() {
+            document.getElementById("empImage").src = window.URL.createObjectURL(document.getElementById("imageFormFile").files[0]);
+        }
+    </script>
+}

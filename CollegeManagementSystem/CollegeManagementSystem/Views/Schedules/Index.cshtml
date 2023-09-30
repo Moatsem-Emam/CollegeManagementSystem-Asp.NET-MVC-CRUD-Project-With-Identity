@@ -1,0 +1,50 @@
+﻿@using College_Management_System.Models;
+<h1 class="alert alert-info text-center">Schedules</h1>
+@{
+	@model IEnumerable<Schedules>;
+
+}
+
+<a asp-controller="Schedules" asp-action="GetCreateView" class="btn btn-outline-info">Create New</a>
+<br />
+<p class="mt-1"></p>
+@if (Model.Count() != 0)
+{
+
+	<table class="table" @*class="table table-bordered table-striped table-hover"*@>
+		<thead>
+			<tr>
+
+				<th>@Html.DisplayNameFor(s=>s.Day)</th>
+				<th>@Html.DisplayNameFor(s=>s.time_start)</th>
+				<th>@Html.DisplayNameFor(s=>s.time_end)</th>
+@*				<th>@Html.DisplayNameFor(s=>s.Courses.course_name)</th>
+*@				<th>Actions</th>
+
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var item in Model)
+			{
+				<tr>
+
+					<td>@item.Day</td>
+					<td>@item.time_start</td>
+					<td>@item.time_end</td>
+@*					<td>@item.Courses.course_name</td>
+*@					<td>
+						<a class="btn btn-outline-primary" asp-controller="Schedules" asp-action="GetDetails" asp-route-id="@item.Id"><i class="bi bi-card-text"></i></a>
+						<a class="btn btn-outline-success" asp-controller="Schedules" asp-action="GetEditViews" asp-route-id="@item.Id"> <i class="bi bi-pencil-square"></i></a>
+						<a class="btn btn-outline-danger " asp-action="GetRemoveView" asp-controller="Schedules" asp-route-id="@item.Id"><i class="bi bi-trash"></i></a>
+					</td>
+
+				</tr>
+			}
+		</tbody>
+	</table>
+}
+else
+{
+	<h1 style="text-align:center; background-color:indianred">There is no data.</h1>
+}
+<br />

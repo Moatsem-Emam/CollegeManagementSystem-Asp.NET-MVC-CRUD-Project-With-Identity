@@ -1,0 +1,23 @@
+﻿@using College_Management_System.Models;
+@model Courses;
+<h1 class="alert alert-danger">Are you sure to delete @Model.course_name`s Details</h1>
+<div class="row col-6">
+	<dl class="row">
+
+		<dt class="col-2">@Html.DisplayNameFor(e=>Model.Id)</dt>
+		<dd class="col-10">@Html.DisplayFor(e=>Model.Id)</dd>
+
+		<dt class="col-2">@Html.DisplayNameFor(e=>Model.course_name)</dt>
+		<dd class="col-10">@Html.DisplayFor(e=>Model.course_name)</dd>
+
+		<dt class="col-2">@Html.DisplayNameFor(e=>Model.course_desc)</dt>
+		<dd class="col-10">@Html.DisplayFor(e=>Model.course_desc)</dd>
+
+	</dl>
+	<form method="post" asp-controller="Courses" asp-action="DeleteC" >
+		<input type="hidden" asp-for="Id" />
+		<button type="submit" class="btn btn-danger">Delete</button>
+	</form>
+	<a class="btn btn-block mt-1" asp-action="GetIndexView" asp-controller="Courses">Back to list</a>
+</div>
+

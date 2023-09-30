@@ -1,0 +1,28 @@
+﻿@using College_Management_System.Models;
+@model Student;
+<h1 class="alert alert-info text-center">@Model.Full_Name`s Courses</h1>
+
+	<h3>Student Courses</h3>
+	@if (Model.studentCourses.Count() > 0)
+	{
+		<ul>
+			@foreach (var item in Model.studentCourses)
+			{
+				<li>
+					@if (item.course != null)
+					{
+						<P>@item.course.course_name (@item.course.course_desc)</P>
+					}
+				</li>
+			}
+		</ul>
+	}
+	else
+	{
+		<h1 class="alert alert-danger">There is no Courses related to this Student.</h1>
+	}
+
+
+</div>
+<a class="btn btn-primary btn-block mb-4" asp-action="GetIndexView" asp-controller="Student">Back to list</a>
+

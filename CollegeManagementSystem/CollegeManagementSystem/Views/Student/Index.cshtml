@@ -1,0 +1,47 @@
+﻿@using College_Management_System.Models;
+<h1 class="alert alert-info text-center">Students</h1>
+@{
+	@model IEnumerable<Student>;
+
+}
+
+<a asp-controller="Student" asp-action="GetCreateView" class="btn btn-success">Create New</a>
+<br />
+<p class="mt-1"></p>
+@if (Model.Count() != 0)
+{
+
+	<table class="table" @*class="table table-bordered table-striped table-hover"*@>
+		<thead>
+			<tr>
+
+				<th>@Html.DisplayNameFor(s=>s.Full_Name)</th>
+				<th>@Html.DisplayNameFor(s=>s.contact_add)</th>
+				<th>Actions</th>
+
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var item in Model)
+			{
+				<tr>
+
+					<td>@item.Full_Name</td>
+					<td>@item.contact_add</td>
+					<td>
+						<a class="btn btn-outline-primary" asp-controller="Student" asp-action="GetStudDetails" asp-route-id="@item.Id"><i class="bi bi-card-text"></i></a>
+						<a class="btn btn-outline-success" asp-controller="Student" asp-action="GetEditViews" asp-route-id="@item.Id"> <i class="bi bi-pencil-square"></i></a>
+						<a class="btn btn-outline-danger " asp-action="GetRemoveView" asp-controller="Student" asp-route-id="@item.Id"><i class="bi bi-trash"></i></a>
+
+					</td>
+
+				</tr>
+			}
+		</tbody>
+	</table>
+}
+else
+{
+	<h1 style="text-align:center; background-color:indianred">There is no data.</h1>
+}
+<br />

@@ -1,0 +1,32 @@
+﻿@using College_Management_System.Models;
+@model Student;
+<h1 class="alert alert-danger">Are you sure to delete @Model.Full_Name`s Details</h1>
+<div class="row col-6">
+	<dl class="row">
+
+		<dt class="col-2">@Html.DisplayNameFor(e=>Model.Id)</dt>
+		<dd class="col-10">@Html.DisplayFor(e=>Model.Id)</dd>
+
+		<dt class="col-2">@Html.DisplayNameFor(e=>Model.Full_Name)</dt>
+		<dd class="col-10">@Html.DisplayFor(e=>Model.Full_Name)</dd>
+
+		<dt class="col-2">@Html.DisplayNameFor(e=>Model.Sex)</dt>
+		<dd class="col-10">@Html.DisplayFor(e=>Model.Sex)</dd>
+
+		<dt class="col-2">@Html.DisplayNameFor(e=>Model.BirthDate)</dt>
+		<dd class="col-10">@Html.DisplayFor(e=>Model.BirthDate)</dd>
+
+		<dt class="col-2">@Html.DisplayNameFor(e=>Model.contact_add)</dt>
+		<dd class="col-10">@Html.DisplayFor(e=>Model.contact_add)</dd>
+
+	</dl>
+	<div class="row-cols-2">
+		<img src="@Model.ImageUrl" style="width:20%;aspect-ratio:1/1" />
+	</div>
+	<form method="post" asp-controller="Student" asp-action="DeleteS" enctype="multipart/form-data">
+		<input type="hidden" asp-for="Id" />
+		<button type="submit" class="btn btn-danger">Delete</button>
+	</form>
+	<a class="btn btn-block mt-1" asp-action="GetIndexView" asp-controller="Student">Back to list</a>
+</div>
+@*

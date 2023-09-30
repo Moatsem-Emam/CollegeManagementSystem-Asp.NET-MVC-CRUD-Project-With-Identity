@@ -1,0 +1,29 @@
+﻿@using College_Management_System.Models;
+@model Schedules;
+<h1 class="alert alert-success">Schedules Details</h1>
+<div class="row col-6">
+	<dl class="row">
+
+		<dt class="col-2">@Html.DisplayNameFor(e=>Model.Id)</dt>
+		<dd class="col-10">@Html.DisplayFor(e=>Model.Id)</dd>
+
+		<dt class="col-2">@Html.DisplayNameFor(e=>Model.Day)</dt>
+		<dd class="col-10">@Html.DisplayFor(e=>Model.Day)</dd>
+
+		<dt class="col-2">@Html.DisplayNameFor(e=>Model.time_start)</dt>
+		<dd class="col-10">@Html.DisplayFor(e=>Model.time_start)</dd>
+
+		<dt class="col-2">@Html.DisplayNameFor(e=>Model.time_end)</dt>
+		<dd class="col-10">@Html.DisplayFor(e=>Model.time_end)</dd>
+
+		<dt class="col-2">@Html.DisplayNameFor(e=>e.CoursesID)</dt>
+		<dd class="col-10">@Html.DisplayFor(e=>e.Courses.course_name)</dd>
+
+	</dl>
+
+	<a class="btn btn-outline-info mt-1" asp-action="GetIndexView" asp-controller="Schedules">Back to list</a>
+</div>
+
+
+@*<h1 class="alert alert-danger">There is no Schedules related to this Student.</h1>
+*@

@@ -1,0 +1,49 @@
+﻿@using College_Management_System.Models;
+@model Schedules
+<h1 class="alert alert-info ">Create Schedules</h1>
+<br />
+<form class="col-3" method="post" asp-action="CreateS" asp-controller="Schedules" enctype="multipart/form-data">
+    <!-- 2 column grid layout with text inputs for the first and last names -->
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="row mb-1">
+        <div class="col-3">
+            <label asp-for="CoursesID"></label>
+        <select asp-for="CoursesID" asp-items="@ViewBag.AllCourses" class="form-select">
+            <option selected disabled>Select </option>
+        </select>
+        <span asp-validation-for="Courses" class="text-danger"></span>
+        </div>
+        <div class="col">
+            <div class="form-outline">
+
+                <label asp-for="Day"></label>
+                <input asp-for="Day" type="text" class="form-control" />
+                <span asp-validation-for="Day" class="text-danger"></span>
+
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-outline">
+
+                <label asp-for="time_start"></label>
+                <input asp-for="time_start" id="form3Example2" class="form-control" />
+                <span asp-validation-for="time_start" class="text-danger"></span>
+
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-outline">
+
+                <label asp-for="time_end"></label>
+                <input asp-for="time_end" id="form3Example2" class="form-control" />
+                <span asp-validation-for="time_end" class="text-danger"></span>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary btn-block mb-4">Add</button>
+    <a class="btn btn-primary btn-block mb-4" asp-action="GetIndexView" asp-controller="Schedules">Back to list</a>
+
+</form>

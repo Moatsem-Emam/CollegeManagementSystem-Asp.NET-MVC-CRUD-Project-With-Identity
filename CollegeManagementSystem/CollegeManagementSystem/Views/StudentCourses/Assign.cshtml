@@ -1,0 +1,18 @@
+﻿@model CollegeManagementSystem.Models.StudentCourses
+
+<h2>Assign Courses to Students</h2>
+
+<form asp-controller="StudentCourses" asp-action="Create" method="post">
+
+    <label>Select student:</label>
+    <select class="form-control" asp-for="studentId" asp-items="@ViewBag.AllStudents"></select>
+
+    <label>Select Course:</label>
+    <select class="form-control" asp-for="courseId" asp-items="@ViewBag.AllCourses"></select>
+
+    <div>
+        <button class="btn btn-info mt-2" type="submit">Assign</button>
+    </div>
+    <div class="validation-summary-errors text-danger" asp-validation-summary="All"></div>
+
+</form>
