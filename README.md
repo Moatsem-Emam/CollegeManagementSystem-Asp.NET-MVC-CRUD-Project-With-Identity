@@ -1,11 +1,10 @@
-# Online Shopping System
+# College Management System
 
 ## Table of Contents
 - [Description](#description)
 - [Technologies Used](#technologies-used)
 - [Features](#features)
 - [Installation](#installation)
-- [How To Run](#How-To-Run)
 - [Screenshots/Demo](#screenshotsdemo)
 - [Contact](#contact)
 
@@ -37,7 +36,6 @@ The College Management System is a web application built with ASP.NET Core MVC, 
 To run this project locally, follow these steps:
 
  1. Clone this repository to your local machine.
- 2. https://github.com/yourusername/college-management-system.git
     ```bash
     git clone https://github.com/yourusername/college-management-system.git
  3. Navigate to the project directory.
@@ -48,27 +46,22 @@ To run this project locally, follow these steps:
     ```bash
     dotnet ef database update
 
-### How To Run
-#### 1. Go to solution files then Right click >> Properties >> Startup files
-#### 2. Select this option to run multiple files 
-![Screenshot (560)](https://github.com/Moatsem-Emam/OnlineShoppingSystem-Asp.NET-Consume-WebApi-CRUD-Project/assets/146538331/518cb12a-206f-4722-88c2-103fef1501b5)
-
 
 ### Screenshots/Demo
 #### Model Diagram
-![Screenshot 2023-09-11 223232](https://github.com/Moatsem-Emam/OnlineShoppingSystem-Asp.NET-Consume-WebApi-CRUD-Project/assets/146538331/571190c1-244c-42c2-93e1-9ee4f64c37a6)
+![Screenshot (565)](https://github.com/Moatsem-Emam/CollegeManagementSystem-Asp.NET-MVC-CRUD-Project-With-Identity/assets/146538331/2d5657fa-84a5-4cf4-a80d-b96fb27d51b9)
 #### Home Page
-![Screenshot (487)](https://github.com/Moatsem-Emam/OnlineShoppingSystem-Asp.NET-Consume-WebApi-CRUD-Project/assets/146538331/d64de4f4-7413-4d21-a4ed-7e514b40529c)
-#### Product Data
-![Screenshot (497)](https://github.com/Moatsem-Emam/OnlineShoppingSystem-Asp.NET-Consume-WebApi-CRUD-Project/assets/146538331/bbca7511-f63b-4f9f-b7a9-29e39cdd0e0d)
-#### Create Product
-![Screenshot (498)](https://github.com/Moatsem-Emam/OnlineShoppingSystem-Asp.NET-Consume-WebApi-CRUD-Project/assets/146538331/36650324-248a-4d6e-b422-7173d1d7df7c)
-#### Edit Product
-![Screenshot (502)](https://github.com/Moatsem-Emam/OnlineShoppingSystem-Asp.NET-Consume-WebApi-CRUD-Project/assets/146538331/ceba4a37-d8b3-4a70-ba3b-fae7c7d8288c)
-#### Details
-![Screenshot (500)](https://github.com/Moatsem-Emam/OnlineShoppingSystem-Asp.NET-Consume-WebApi-CRUD-Project/assets/146538331/d46721fa-02a3-411e-8954-dfe2bcbc41b4)
-#### Delete
-![Screenshot (504)](https://github.com/Moatsem-Emam/OnlineShoppingSystem-Asp.NET-Consume-WebApi-CRUD-Project/assets/146538331/6d5a8a66-7b22-4b78-8de2-dec48247c9df)
+![Screenshot 2023-10-01 121854](https://github.com/Moatsem-Emam/CollegeManagementSystem-Asp.NET-MVC-CRUD-Project-With-Identity/assets/146538331/5a140b8a-e2bf-4399-8c2e-d799f6efb0fd)
+#### Login
+![Screenshot 2023-10-01 121945](https://github.com/Moatsem-Emam/CollegeManagementSystem-Asp.NET-MVC-CRUD-Project-With-Identity/assets/146538331/4123466d-0381-4d0b-948c-4f6046d1d575)
+#### Register
+![Screenshot 2023-10-01 122252](https://github.com/Moatsem-Emam/CollegeManagementSystem-Asp.NET-MVC-CRUD-Project-With-Identity/assets/146538331/b7af5f3f-1281-4736-bd36-cd30eb7c11bb)
+#### Home Page After Login As Admin Role
+![Screenshot 2023-10-01 122548](https://github.com/Moatsem-Emam/CollegeManagementSystem-Asp.NET-MVC-CRUD-Project-With-Identity/assets/146538331/3015103a-5870-4d21-bf12-11894e4337c4)
+.
+.
+. etc..
+#### Also you can apply crud operations on it, you can see full slides [Here](https://github.com/Moatsem-Emam/CollegeManagementSystem-Asp.NET-MVC-CRUD-Project-With-Identity/blob/main/College%20Management%20System%20Slides.pptx).
 ## Contact
 
 For any inquiries or feedback, you can reach out to [Motsememamhussain@gmail.com](mailto:Motsememamhussain@gmail.com) or connect with us on [GitHub](https://github.com/Moatsem-Emam).
